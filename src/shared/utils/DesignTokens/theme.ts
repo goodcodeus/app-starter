@@ -145,7 +145,7 @@ export const theme: DesignTokens = {
     },
     secondary: {
       background: themeColors.slate['500'],
-      color: themeColors.gray['700']
+      color: themeColors.grey['700']
     },
     error: {
       background: themeColors.red['500'],
