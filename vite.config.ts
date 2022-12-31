@@ -18,11 +18,6 @@ export default defineConfig(({ mode, command }) => {
         typescript: true
       })
     ],
-    define: {
-      // AWS Amplify throws error about global undefined
-      // Reference: https://github.com/vitejs/vite/discussions/5912#discussioncomment-2908994
-      global: {}
-    },
     server: {
       port: 3000,
       open: true,
