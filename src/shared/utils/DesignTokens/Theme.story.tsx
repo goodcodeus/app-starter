@@ -9,65 +9,47 @@ import {
   SpacingBlocks,
   TypographyBlocks
 } from 'reablocks';
-import { theme } from './theme';
 
 export default {
   title: 'General/Theme',
-  component: DesignTokensProvider
+  component: DesignTokensProvider,
+  decorators: [
+    Story => (
+      <div style={{ width: '95vw' }}>
+        <Story />
+      </div>
+    )
+  ]
 };
 
 export const Colors = () => (
-  <DesignTokensProvider value={theme}>
-    <div style={{ width: '90vw' }}>
-      <ColorBlocks />
-    </div>
-  </DesignTokensProvider>
+  <ColorBlocks />
 );
 
 export const Palettes = () => (
-  <DesignTokensProvider value={theme}>
-    <div style={{ width: '90vw' }}>
-      <PaletteBlocks />
-    </div>
-  </DesignTokensProvider>
+  <PaletteBlocks />
 );
 
 export const Typography = () => (
-  <DesignTokensProvider value={theme}>
-    <div style={{ width: '90vw' }}>
-      <TypographyBlocks />
-    </div>
-  </DesignTokensProvider>
+  <TypographyBlocks />
 );
 
 export const Spacings = () => (
-  <DesignTokensProvider value={theme}>
-    <SpacingBlocks />
-  </DesignTokensProvider>
+  <SpacingBlocks />
 );
 
 export const Borders = () => (
-  <DesignTokensProvider value={theme}>
-    <BorderBlocks />
-  </DesignTokensProvider>
+  <BorderBlocks />
 );
 
 export const Gradients = () => (
-  <DesignTokensProvider value={theme}>
-    <div style={{ width: '90vw' }}>
-      <GradientBlocks />
-    </div>
-  </DesignTokensProvider>
+  <GradientBlocks />
 );
 
 export const Shadows = () => (
-  <DesignTokensProvider value={theme}>
-    <ShadowBlocks />
-  </DesignTokensProvider>
+  <ShadowBlocks />
 );
 
 export const Components = () => (
-  <DesignTokensProvider value={theme}>
-    <ComponentBlocks />
-  </DesignTokensProvider>
+  <ComponentBlocks />
 );
