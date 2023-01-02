@@ -9994,10 +9994,10 @@ rdk@^6.1.0:
     popper.js "^1.16.1"
     react-scrolllock "^5.0.1"
 
-reablocks@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/reablocks/-/reablocks-1.5.0.tgz#159e225e2bad41f34a3d96ea96f4411e3a568992"
-  integrity sha512-X5n4nZYnlp4zppYWP3YBZ9KVsCGBW4QqWQjsn1ooXnPrJLCPe0REBZ4oo4y6a9cO++Ba76D1s9mniuEmdXQnsA==
+reablocks@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/reablocks/-/reablocks-2.0.0.tgz#8ce8b2d3c3fe46ecbcebd4179699ce74fb324aaf"
+  integrity sha512-C58M/LgKw235/sPz9gNx2lnKaVPhSnGlqvEL9yFf+oOR2cgoYAAEBTG1vzeUn3VgYjT7vjItMiqSuubQyLLX1w==
   dependencies:
     chroma-js "^2.4.2"
     classnames "^2.3.1"

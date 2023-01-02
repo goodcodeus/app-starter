@@ -1,82 +1,129 @@
 import { DesignTokens, Colors } from 'reablocks';
 
+const spacings = {
+  xs: '2px',
+  sm: '5px',
+  md: '10px',
+  lg: '20px',
+  xl: '24px',
+  xxl: '30px'
+};
+
+const borders = {
+  radius: {
+    sm: '2px',
+    md: '5px',
+    lg: '10px'
+  }
+};
+
 export const themeColors: Colors = {
-  blue: {
-    '100': '#DFE4FF',
-    '200': '#C0C8FF',
-    '300': '#A1ACFF',
-    '400': '#8793FF',
-    '500': '#6372FF',
-    '600': '#4B5CFA',
-    '700': '#3B3EF0',
-    '800': '#2E2ED4',
-    '900': '#282AAB'
-  },
-  grey: {
-    '100': '#CACBD0',
-    '200': '#90929E',
-    '300': '#878A96',
-    '400': '#696D77',
-    '500': '#454853',
-    '600': '#33363F',
-    '700': '#262931',
-    '800': '#1C1D22',
-    '900': '#101114'
-  },
   red: {
-    '100': '#FEE2E2',
-    '200': '#FECACA',
-    '300': '#FCA5A5',
-    '400': '#F87171',
-    '500': '#F03C3C',
-    '600': '#DC2626',
-    '700': '#B91C1C',
-    '800': '#991B1B',
-    '900': '#7F1D1D'
+    900: '#1f1315',
+    800: '#291415',
+    700: '#3c181a',
+    600: '#481a1d',
+    500: '#541b1f',
+    400: '#671e22',
+    300: '#822025',
+    200: '#aa2429',
+    100: '#e5484d',
+    50: '#f2555a'
   },
-  orange: {
-    '100': '#FFF4D8',
-    '200': '#FFE7B1',
-    '300': '#FFD68A',
-    '400': '#FFB94D',
-    '500': '#FFAB3D',
-    '600': '#DB872C',
-    '700': '#B7681E',
-    '800': '#934B13',
-    '900': '#7A370B'
+  purple: {
+    900: '#1b141d',
+    800: '#221527',
+    700: '#301a3a',
+    600: '#3a1e48',
+    500: '#432155',
+    400: '#4e2667',
+    300: '#5f2d84',
+    200: '#7938b2',
+    100: '#8e4ec6',
+    50: '#9d5bd2'
+  },
+  blue: {
+    900: '#0f1720',
+    800: '#0f1b2d',
+    700: '#10243e',
+    600: '#102a4c',
+    500: '#0f3058',
+    400: '#0d3868',
+    300: '#0a4481',
+    200: '#0954a5',
+    100: '#0091ff',
+    50: '#369eff'
   },
   green: {
-    '100': '#CCFAD8',
-    '200': '#9BF5BC',
-    '300': '#66E29F',
-    '400': '#3EC58A',
-    '500': '#0E9F6E',
-    '600': '#0A886A',
-    '700': '#077263',
-    '800': '#045C58',
-    '900': '#02484C'
+    900: '#0d1912',
+    800: '#0f1e13',
+    700: '#132819',
+    600: '#16301d',
+    500: '#193921',
+    400: '#1d4427',
+    300: '#245530',
+    200: '#2f6e3b',
+    100: '#46a758',
+    50: '#55b467'
+  },
+  yellow: {
+    900: '#1c1500',
+    800: '#221a00',
+    700: '#2c2100',
+    600: '#352800',
+    500: '#3e3000',
+    400: '#493c00',
+    300: '#594a05',
+    200: '#705e00',
+    100: '#f5d90a',
+    50: '#ffef5c'
+  },
+  orange: {
+    900: '#1f1206',
+    800: '#2b1400',
+    700: '#391a03',
+    600: '#441f04',
+    500: '#4f2305',
+    400: '#5f2a06',
+    300: '#763205',
+    200: '#943e00',
+    100: '#f76808',
+    50: '#ff802b'
+  },
+  gray: {
+    900: '#161616',
+    800: '#1c1c1c',
+    700: '#232323',
+    600: '#282828',
+    500: '#2e2e2e',
+    400: '#343434',
+    300: '#3e3e3e',
+    200: '#505050',
+    100: '#707070',
+    50: '#7e7e7e'
   },
   slate: {
-    '100': '#fbfcfd',
-    '200': '#f8f9fa',
-    '300': '#f1f3f5',
-    '400': '#eceef0',
-    '500': '#e6e8eb',
-    '600': '#dfe3e6',
-    '700': '#d7dbdf',
-    '800': '#c1c8cd',
-    '900': '#889096'
+    900: '#151718',
+    800: '#1a1d1e',
+    700: '#202425',
+    600: '#26292b',
+    500: '#2b2f31',
+    400: '#313538',
+    300: '#3a3f42',
+    200: '#4c5155',
+    100: '#697177',
+    50: '#787f85'
   },
   overlay: {
-    '100': 'rgba(0, 0, 0, 0.01)',
-    '200': 'rgba(0, 0, 0, 0.02)',
-    '300': 'rgba(0, 0, 0, 0.03)',
-    '400': 'rgba(0, 0, 0, 0.04)',
-    '500': 'rgba(0, 0, 0, 0.05)',
-    '600': 'rgba(0, 0, 0, 0.06)',
-    '700': 'rgba(0, 0, 0, 0.07)',
-    '800': 'rgba(0, 0, 0, 0.08)',
-    '900': 'rgba(0, 0, 0, 0.09)'
+    100: 'rgba(0, 0, 0, 0.01)',
+    200: 'rgba(0, 0, 0, 0.02)',
+    300: 'rgba(0, 0, 0, 0.03)',
+    400: 'rgba(0, 0, 0, 0.04)',
+    500: 'rgba(0, 0, 0, 0.05)',
+    600: 'rgba(0, 0, 0, 0.06)',
+    700: 'rgba(0, 0, 0, 0.07)',
+    800: 'rgba(0, 0, 0, 0.08)',
+    900: 'rgba(0, 0, 0, 0.09)'
   }
 };
 
@@ -85,32 +132,19 @@ export const theme: DesignTokens = {
   typography: {
     families: {
       fontFamily: 'Inter, sans-serif',
-      monoFontFamily: 'JetBrains Mono, monospace'
+      monoFontFamily: 'Monaco, monospace'
     },
     sizes: {
       xs: '8px',
-      sm: '12px',
-      md: '14px',
+      sm: '11px',
+      md: '16px',
       lg: '20px',
       xl: '28px',
       xxl: '32px'
     }
   },
-  spacings: {
-    xs: '2px',
-    sm: '5px',
-    md: '10px',
-    lg: '20px',
-    xl: '24px',
-    xxl: '30px'
-  },
-  borders: {
-    radius: {
-      sm: '2px',
-      md: '5px',
-      lg: '10px'
-    }
-  },
+  spacings,
+  borders,
   gradients: {
     blue: {
       '100': 'linear-gradient(204deg, #19D4EE 10%, #4B5CFA 100%)',
@@ -132,12 +166,18 @@ export const theme: DesignTokens = {
   shadows: {
     100: '0 2px 4px 0 rgba(17,22,26,0.16), 0 0 4px 0 rgba(17,22,26,0.08), 0 4px 8px 0 rgba(17,22,26,0.04)',
     200: '0 4px 8px 0 rgba(17,22,26,0.16), 0 4px 8px 0 rgba(17,22,26,0.08), 0 8px 16px 0 rgba(17,22,26,0.04)',
-    300: '0 0 8px 0 rgba(17,22,26,0.06), 0 4px 16px 0 rgba(17,22,26,0.08), 0 8px 12px 0 rgba(17,22,26,0.06), 0 16px 24px 0 rgba(17,22,26,0.04)'
+    300: '0 0 8px 0 rgba(17,22,26,0.06), 0 4px 16px 0 rgba(17,22,26,0.08), 0 8px 12px 0 rgba(17,22,26,0.06), 0 16px 24px 0 rgba(17,22,26,0.04)',
+    400: '0 4px 12px 0 rgba(17,22,26,0.06), 0 4px 24px 8px rgba(17,22,26,0.12), 0 8px 16px 0 rgba(17,22,26,0.06), 0 32px 40px 0 rgba(17,22,26,0.02)',
+    500: '0 4px 12px 0 rgba(0,0,0,0.08), 0 8px 32px 8px rgba(17,22,26,0.12), 0 16px 24px 8px rgba(17,22,26,0.06), 0 64px 48px 8px rgba(17,22,26,0.06)',
+    600: '0 4px 12px 0 rgba(0,0,0,0.08), 0 8px 32px 8px rgba(17,22,26,0.12), 0 16px 24px 8px rgba(17,22,26,0.06), 0 64px 48px 8px rgba(17,22,26,0.06)',
+    700: '0 4px 12px 0 rgba(0,0,0,0.08), 0 8px 32px 8px rgba(17,22,26,0.12), 0 16px 24px 8px rgba(17,22,26,0.06), 0 64px 48px 8px rgba(17,22,26,0.06)',
+    800: '0 4px 12px 0 rgba(0,0,0,0.08), 0 8px 32px 8px rgba(17,22,26,0.12), 0 16px 24px 8px rgba(17,22,26,0.06), 0 64px 48px 8px rgba(17,22,26,0.06)',
+    900: '0 4px 12px 0 rgba(0,0,0,0.08), 0 8px 32px 8px rgba(17,22,26,0.12), 0 16px 24px 8px rgba(17,22,26,0.06), 0 64px 48px 8px rgba(17,22,26,0.06)'
   },
   palettes: {
     body: {
-      background: '#1c1d22',
-      color: 'white'
+      background: themeColors.gray['900'],
+      color: themeColors.slate['50']
     },
     primary: {
       background: themeColors.blue['800'],
@@ -145,7 +185,7 @@ export const theme: DesignTokens = {
     },
     secondary: {
       background: themeColors.slate['500'],
-      color: themeColors.grey['700']
+      color: themeColors.slate['100']
     },
     error: {
       background: themeColors.red['500'],
@@ -161,5 +201,23 @@ export const theme: DesignTokens = {
     }
   },
   components: {
+    divider: {
+      'divider-spacing': spacings.md,
+      'divider-bg': themeColors.gray['500']
+    },
+    card: {
+      'card-border-radius': borders.radius.md,
+      'card-spacing': spacings.md,
+      'card-bg': themeColors.slate['800'],
+      'card-color': themeColors.slate['50']
+    },
+    block: {
+      'block-spacing': spacings.md,
+      'block-label-spacing': spacings.sm
+    },
+    list: {
+      'list-item-spacing': spacings.md,
+      'list-item-dense-spacing': spacings.sm
+    }
   }
 };
