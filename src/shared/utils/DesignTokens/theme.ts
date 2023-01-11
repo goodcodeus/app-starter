@@ -18,6 +18,8 @@ const borders = {
 };
 
 export const themeColors: Colors = {
+  black: '#000000',
+  white: '#ffffff',
   red: {
     900: '#1f1315',
     800: '#291415',
@@ -177,47 +179,125 @@ export const theme: DesignTokens = {
   palettes: {
     body: {
       background: themeColors.gray['900'],
-      color: themeColors.slate['50']
+      color: themeColors.white
     },
     primary: {
-      background: themeColors.blue['800'],
-      color: themeColors.slate['100']
+      background: themeColors.purple['300'],
+      color: themeColors.purple['300'],
+      'background-hover': themeColors.purple['200'],
+      'color-hover': themeColors.purple['200']
     },
     secondary: {
-      background: themeColors.slate['500'],
-      color: themeColors.slate['100']
+      background: themeColors.blue['500'],
+      color: themeColors.blue['300'],
+      'background-hover': themeColors.blue['400'],
+      'color-hover': themeColors.blue['200']
     },
     error: {
-      background: themeColors.red['500'],
-      color: themeColors.slate['100']
+      background: themeColors.red['100'],
+      color: themeColors.red['100'],
+      'background-hover': themeColors.red['50'],
+      'color-hover': themeColors.red['50']
     },
     success: {
-      background: themeColors.green['500'],
-      color: themeColors.slate['100']
+      background: themeColors.green['100'],
+      color: themeColors.green['100'],
+      'background-hover': themeColors.green['50'],
+      'color-hover': themeColors.green['50']
     },
     warning: {
-      background: themeColors.orange['500'],
-      color: themeColors.slate['100']
+      background: themeColors.orange['100'],
+      color: themeColors.orange['100'],
+      'background-hover': themeColors.orange['50'],
+      'color-hover': themeColors.orange['50']
+    },
+    info: {
+      background: themeColors.blue['100'],
+      color: themeColors.blue['100'],
+      'background-hover': themeColors.blue['50'],
+      'color-hover': themeColors.blue['50']
+    },
+    disabled: {
+      background: themeColors.gray['500'],
+      color: themeColors.gray['200']
     }
   },
   components: {
     divider: {
       'divider-spacing': spacings.md,
-      'divider-bg': themeColors.gray['500']
+      'divider-background': themeColors.gray['500']
     },
     card: {
       'card-border-radius': borders.radius.md,
       'card-spacing': spacings.md,
-      'card-bg': themeColors.slate['800'],
+      'card-background': themeColors.slate['800'],
       'card-color': themeColors.slate['50']
+    },
+    chip: {
+      'chip-background': themeColors.gray['200'],
+      'chip-background-hover': themeColors.gray['100'],
+      'chip-color': themeColors.white,
+      'chip-color-hover': themeColors.gray['50'],
+      'chip-border-radius': borders.radius.md
     },
     block: {
       'block-spacing': spacings.md,
-      'block-label-spacing': spacings.sm
+      'block-label-spacing': spacings.xs
     },
     list: {
       'list-item-spacing': spacings.md,
       'list-item-dense-spacing': spacings.sm
+    },
+    button: {
+      'button-font-weight': '500',
+      'button-background': themeColors.gray['200'],
+      'button-background-hover': themeColors.gray['100'],
+      'button-color': themeColors.gray['100'],
+      'button-color-hover': themeColors.gray['50'],
+      'button-color-on-background': themeColors.white,
+      'button-disabled-color-on-background': themeColors.gray['100'],
+      'button-spacing': `${spacings.sm} ${spacings.md}`,
+      'button-border-radius': borders.radius.md,
+      'button-border': `solid 1px ${themeColors.gray['500']}`,
+      'button-focus': themeColors.blue['100'],
+      'button-focus-offset': spacings.xs
+    },
+    input: {
+      'input-background': themeColors.slate['800'],
+      'input-color': themeColors.white,
+      'input-border-radius': borders.radius.md,
+      'input-border': `solid 1px ${themeColors.gray['500']}`,
+      'input-spacing-md': `${spacings.sm} ${spacings.md}`,
+      'input-spacing-sm': spacings.sm,
+      'input-spacing-lg': spacings.lg
+    },
+    dialog: {
+      'dialog-background': themeColors.slate['800'],
+      'dialog-color': themeColors.white
+    },
+    drawer: {
+      'drawer-background': themeColors.slate['800'],
+      'drawer-color': themeColors.white
+    },
+    tooltip: {
+      'tooltip-background': themeColors.slate['500'],
+      'tooltip-color': themeColors.white,
+      'tooltip-border-radius': borders.radius.md,
+      'tooltip-spacing': spacings.sm
+    },
+    popover: {
+      'popover-background': themeColors.slate['500'],
+      'popover-color': themeColors.white,
+      'popover-border-radius': borders.radius.md,
+      'popover-spacing': spacings.md
+    },
+    notification: {
+      'notification-background': themeColors.slate['700'],
+      'notification-color': themeColors.white,
+      'notification-border': `solid 1px ${themeColors.gray['500']}`,
+      'notification-color-error': themeColors.red['100'],
+      'notification-color-warning': themeColors.orange['100'],
+      'notification-color-success': themeColors.green['100']
     }
   }
 };

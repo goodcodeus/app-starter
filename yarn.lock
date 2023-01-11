@@ -9994,18 +9994,21 @@ rdk@^6.1.0:
     popper.js "^1.16.1"
     react-scrolllock "^5.0.1"
 
-reablocks@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/reablocks/-/reablocks-2.0.0.tgz#8ce8b2d3c3fe46ecbcebd4179699ce74fb324aaf"
-  integrity sha512-C58M/LgKw235/sPz9gNx2lnKaVPhSnGlqvEL9yFf+oOR2cgoYAAEBTG1vzeUn3VgYjT7vjItMiqSuubQyLLX1w==
+reablocks@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/reablocks/-/reablocks-3.0.1.tgz#d065e92051eaadb53c18527b0b8c52af81a98dae"
+  integrity sha512-I2Q0N6GcTE3qj+AM7BQel36kpb8Q3v92Roa4avy/9+cn4QCHnEV6t4lPi5udlU2y4pQzzamD4+E2090Fcez25Q==
   dependencies:
     chroma-js "^2.4.2"
     classnames "^2.3.1"
     coverup "^0.1.1"
+    create-global-state-hook "^0.0.2"
     ellipsize "^0.5.1"
+    focus-trap-react "^8.7.1"
     framer-motion "^7.6.7"
     human-format "^1.0.0"
     pluralize "^8.0.0"
+    rdk "^6.1.0"
 
 react-docgen-typescript@^2.1.1:
   version "2.2.2"
@@ -10245,17 +10248,6 @@ readdirp@~3.6.0:
   integrity sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==
   dependencies:
     picomatch "^2.2.1"
-
-realayers@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/realayers/-/realayers-3.1.0.tgz#6e71b102d7a584429a59affafc95e95bae56082f"
-  integrity sha512-Y/LDCnC04cB2an4Nrxm9ZXWucxvr+OwCMGFB+BpDCqJzvA6rxB6MPiWRGu6mlfFHdxBJ7FS4xz6Uuq/cY+M9IA==
-  dependencies:
-    classnames "^2.3.1"
-    create-global-state-hook "^0.0.2"
-    focus-trap-react "^8.7.1"
-    framer-motion "^7.6.7"
-    rdk "^6.1.0"
 
 redent@^1.0.0:
   version "1.0.0"
