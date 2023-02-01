@@ -4,13 +4,7 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: [
-    'prettier',
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:@typescript-eslint/recommended'
-  ],
+  extends: ['prettier', 'eslint:recommended', 'plugin:react/recommended', 'plugin:react-hooks/recommended', 'plugin:@typescript-eslint/recommended', 'plugin:storybook/recommended'],
   overrides: [],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -20,14 +14,11 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   rules: {
     curly: 2,
-    'no-unused-vars': [
-      'off',
-      {
-        argsIgnorePattern: '^_',
-        ignoreRestSiblings: true,
-        args: 'none'
-      }
-    ],
+    'no-unused-vars': ['off', {
+      argsIgnorePattern: '^_',
+      ignoreRestSiblings: true,
+      args: 'none'
+    }],
     'react/prop-types': ['off'],
     'react/display-name': ['off'],
     '@typescript-eslint/ban-ts-comment': ['warn'],
