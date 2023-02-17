@@ -2,7 +2,7 @@ name: deploy-dev
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -64,7 +64,7 @@ jobs:
 
     - uses: actions/setup-node@v2
       with:
-        node-version: "16"
+        node-version: "18"
         cache: "yarn"
 
     - name: Install
