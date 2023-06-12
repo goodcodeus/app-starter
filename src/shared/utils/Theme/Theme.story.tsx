@@ -2,7 +2,7 @@ import {
   BorderBlocks,
   ColorBlocks,
   ComponentBlocks,
-  DesignTokensProvider,
+  ThemeProvider,
   GradientBlocks,
   PaletteBlocks,
   ShadowBlocks,
@@ -12,7 +12,7 @@ import {
 
 export default {
   title: 'General/Theme',
-  component: DesignTokensProvider,
+  component: ThemeProvider,
   decorators: [
     Story => (
       <div style={{ width: '95vw' }}>

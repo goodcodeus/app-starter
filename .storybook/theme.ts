@@ -1,5 +1,5 @@
 import { create } from '@storybook/theming';
-import Logo from '../src/assets/brand/logo-bw.png';
+import Logo from '../src/assets/brand/logo.svg';
 
 export const storybookTheme = create({
   brandImage: Logo,

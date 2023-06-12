@@ -13,7 +13,11 @@ export default defineConfig(({ mode, command }) => {
       svgrPlugin(),
       tsconfigPaths(),
       react(),
-      eslint(),
+      eslint({
+        // eslint-disable-next-line
+        // @ts-ignore
+        exclude: [/virtual:/, /node_modules/]
+      }),
       checker({
         typescript: true
       })
@@ -23,14 +27,16 @@ export default defineConfig(({ mode, command }) => {
       open: true,
       host: '::',
       proxy: {
-        '/api': {
-
-        }
+        // TODO: Fill in the API URL
       }
     },
     test: {
       globals: true,
-      environment: 'jsdom'
+      environment: 'jsdom',
+      coverage: {
+        reporter: ['text', 'json-summary'],
+        exclude: ['node_modules/']
+      }
     }
   };
 

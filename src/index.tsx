@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter } from 'react-router-dom';
-import { DesignTokensProvider } from 'reablocks';
+import { ThemeProvider } from 'reablocks';
 
-import { theme } from 'shared/utils/DesignTokens';
+import { theme } from 'shared/utils/Theme';
 import { ErrorBoundary } from 'shared/utils/ErrorBoundary';
 import { Auth } from 'core/Auth';
 import { ApolloProvider } from 'core/Apollo';
@@ -18,13 +18,13 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <ApolloProvider>
         <HelmetProvider>
           <Helmet titleTemplate="%s | Starter" defaultTitle="Starter" />
-          <DesignTokensProvider value={theme}>
+          <ThemeProvider value={theme}>
             <ErrorBoundary>
               <Auth>
                 <App />
               </Auth>
             </ErrorBoundary>
-          </DesignTokensProvider>
+          </ThemeProvider>
         </HelmetProvider>
       </ApolloProvider>
     </BrowserRouter>
