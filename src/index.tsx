@@ -18,7 +18,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <ApolloProvider>
         <HelmetProvider>
           <Helmet titleTemplate="%s | Starter" defaultTitle="Starter" />
-          <ThemeProvider value={theme}>
+          <ThemeProvider theme={theme}>
             <ErrorBoundary>
               <Auth>
                 <App />

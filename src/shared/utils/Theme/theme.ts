@@ -266,11 +266,30 @@ export const theme: Theme = {
       'input-border-focus': colors.gray['100'],
       'input-spacing-md': `${spacings.sm} ${spacings.md}`,
       'input-spacing-sm': spacings.sm,
-      'input-spacing-lg': spacings.lg
+      'input-spacing-lg': spacings.lg,
+      'input-adornment-size': fontSizes.md,
+      'input-adornment-fill': 'var(--input-color)'
+    },
+    textarea: {
+      'textarea-background': colors.slate['800'],
+      'textarea-border': `solid 1px ${colors.gray['200']}`,
+      'textarea-border-radius': borders.radius.md,
+      'textarea-border-focus': colors.gray['100'],
+      'textarea-color': colors.white,
+      'textarea-color-placeholder': colors.gray['200'],
+      'textarea-placeholder-style': 'italic',
+      'textarea-spacing-md': spacings.md,
+      'textarea-spacing-sm': spacings.sm,
+      'textarea-spacing-lg': spacings.lg
     },
     list: {
+      'list-item-color': 'inherit',
       'list-item-spacing': spacings.md,
-      'list-item-dense-spacing': spacings.sm
+      'list-item-dense-spacing': spacings.sm,
+      'list-item-border-radius': '0',
+      'list-item-color-active': 'inherit',
+      'list-item-background-active': 'transparent',
+      'list-item-adornment-fill': 'currentColor'
     },
     popover: {
       'popover-background': colors.slate['500'],
@@ -358,9 +377,9 @@ export const theme: Theme = {
       'avatar-initials-color': colors.white,
       'avatar-border': 'solid 1px var(--body-background)'
     },
-    spacer: {
-      'spacer-gap': spacings.md,
-      'spacer-dense-gap': spacings.sm
+    stack: {
+      'stack-gap': spacings.md,
+      'stack-dense-gap': spacings.sm
     },
     avatarGroup: {
       'avatar-group-spacing': `calc(${spacings.md} * -1)`
@@ -378,14 +397,17 @@ export const theme: Theme = {
       'secondary-heading-font-weight': 'var(--font-weight-normal)',
       'secondary-heading-color': colors.white,
       'secondary-heading-margin': '0 0 var(--spacing-sm) 0',
-      'small-heading-font-size': 'var(--font-size-lg)',
-      'small-heading-font-weight': 'var(--font-weight-thin)',
+      'small-heading-font-size': 'var(--font-size-md)',
+      'small-heading-font-weight': 'var(--font-weight-normal)',
       'small-heading-color': colors.white,
       'small-heading-margin': '0 0 var(--spacing-sm) 0',
       'sub-font-size': 'var(--font-size-sm)',
       'sub-font-weight': 'var(--font-weight-bold)',
       'sub-color': colors.white,
       'sub-margin': '0 0 var(--spacing-xs) 0'
+    },
+    calendar: {
+      'calendar-spacing': '8px'
     }
   }
 };

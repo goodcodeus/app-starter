@@ -12,7 +12,7 @@ const preview: Preview = {
   decorators: [
     Story => (
       <BrowserRouter>
-        <ThemeProvider value={theme}>
+        <ThemeProvider theme={theme}>
           <Story />
         </ThemeProvider>
       </BrowserRouter>
@@ -26,7 +26,7 @@ const preview: Preview = {
       theme: storybookTheme,
       container: ({ context, children }) => (
         <DocsContainer context={context}>
-          <ThemeProvider value={theme}>
+          <ThemeProvider theme={theme}>
             {children}
           </ThemeProvider>
         </DocsContainer>
