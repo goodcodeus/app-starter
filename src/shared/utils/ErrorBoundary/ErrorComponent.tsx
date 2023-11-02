@@ -1,9 +1,25 @@
-import { FC } from 'react';
+import { FC, useEffect, useRef } from 'react';
+import { FallbackProps } from 'react-error-boundary';
+import { useLocation } from 'react-router-dom';
 
-export const ErrorComponent: FC<{ error: any }> = ({ error }) => (
-  <div>
-    <h1>Error</h1>
-    <h2>Something bad happened</h2>
-    <pre>{error.message}</pre>
-  </div>
-);
+export const ErrorComponent: FC<FallbackProps> = ({
+  error,
+  resetErrorBoundary
+}) => {
+  const location = useLocation();
+  const initialPathname = useRef(location.pathname);
+
+  useEffect(() => {
+    if (location.pathname !== initialPathname.current) {
+      resetErrorBoundary();
+    }
+  }, [initialPathname, location.pathname, resetErrorBoundary]);
+
+  return (
+    <div>
+      <h1>Error</h1>
+      <h2>Something bad happened</h2>
+      <pre>{error.message}</pre>
+    </div>
+  );
+};
