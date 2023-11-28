@@ -51,6 +51,7 @@
     "@typescript-eslint/eslint-plugin": "^6.13.0",
     "@typescript-eslint/parser": "^6.13.0",
     "@vitejs/plugin-react": "^4.2.0",
+    "@vitest/coverage-v8": "^0.34.6",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.54.0",
     "eslint-config-prettier": "^9.0.0",
@@ -71,6 +72,11 @@
     "vite-plugin-svgr": "^3.2.0",
     "vite-tsconfig-paths": "^4.2.1",
     "vitest": "^0.34.6"
+  },
+  "overrides": {
+    "vite-plugin-svgr": {
+      "vite": "^5.0.2"
+    }
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
