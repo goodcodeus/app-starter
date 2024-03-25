@@ -3,12 +3,15 @@ import {
   ColorBlocks,
   ComponentBlocks,
   ThemeProvider,
-  GradientBlocks,
   PaletteBlocks,
   ShadowBlocks,
   SpacingBlocks,
-  TypographyBlocks
+  TypographyBlocks,
+  extractTheme,
+  useTheme
 } from 'reablocks';
+import TWConfig from './config';
+import tailwindConfig from '../../../../tailwind.config';
 
 export default {
   title: 'General/Theme',
@@ -22,34 +25,47 @@ export default {
   ]
 };
 
+const {
+  colors,
+  palettes,
+  borderRadius,
+  boxShadow,
+  spacing,
+  fontFamily,
+  fontSize,
+  fontWeight
+} = extractTheme(TWConfig, tailwindConfig);
+
+
 export const Colors = () => (
-  <ColorBlocks />
+  <ColorBlocks colors={colors} />
 );
 
 export const Palettes = () => (
-  <PaletteBlocks />
+  <PaletteBlocks palettes={palettes} />
 );
 
 export const Typography = () => (
-  <TypographyBlocks />
+  <TypographyBlocks
+    families={fontFamily}
+    sizes={fontSize}
+    weights={fontWeight}
+  />
 );
 
 export const Spacings = () => (
-  <SpacingBlocks />
+  <SpacingBlocks spacings={spacing} />
 );
 
 export const Borders = () => (
-  <BorderBlocks />
-);
-
-export const Gradients = () => (
-  <GradientBlocks />
+  <BorderBlocks borders={borderRadius} />
 );
 
 export const Shadows = () => (
-  <ShadowBlocks />
+  <ShadowBlocks shadows={boxShadow} />
 );
 
-export const Components = () => (
-  <ComponentBlocks />
-);
+export const Components = () => {
+  const { theme } = useTheme();
+  return <ComponentBlocks components={theme.components} />;
+};
