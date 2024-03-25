@@ -23,13 +23,13 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: "18"
-        cache: "yarn"
+        cache: 'npm'
 
     - name: Install
-      run: yarn install --frozen-lockfile --non-interactive
+      run: npm install
 
     - name: Build App
-      run: yarn build
+      run: npm run build
       env:
         NODE_OPTIONS: --max_old_space_size=16384
 
@@ -65,13 +65,13 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: "18"
-        cache: "yarn"
+        cache: 'npm'
 
     - name: Install
-      run: yarn install --frozen-lockfile --non-interactive
+      run: npm install
 
     - name: Build Storybook
-      run: yarn build-storybook
+      run: npm run build-storybook
       env:
         NODE_OPTIONS: --max_old_space_size=16384
 
