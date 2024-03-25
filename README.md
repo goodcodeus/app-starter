@@ -1,2 +1,2 @@
 # starter
-🚀 React + Vite + Storybook Starter Project
+🚀 React + Vite + Storybook + Tailwind Starter Project
