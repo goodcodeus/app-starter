@@ -1,7 +1,11 @@
-import { extendTheme, darkTheme, PartialReablocksTheme } from 'reablocks';
+import {
+  extendTheme,
+  theme as reaTheme,
+  PartialReablocksTheme
+} from 'reablocks';
 
 const themeOverrides: PartialReablocksTheme = {
   components: {}
-}
+};
 
-export const theme = extendTheme(darkTheme, themeOverrides);
+export const theme = extendTheme(reaTheme, themeOverrides);
