@@ -11,7 +11,6 @@ import {
   useTheme
 } from 'reablocks';
 import TWConfig from './config';
-import tailwindConfig from '../../../../tailwind.config';
 
 export default {
   title: 'General/Theme',
@@ -27,22 +26,17 @@ export default {
 
 const {
   colors,
-  palettes,
   borderRadius,
   boxShadow,
   spacing,
   fontFamily,
   fontSize,
   fontWeight
-} = extractTheme(TWConfig, tailwindConfig);
+} = extractTheme(TWConfig);
 
 
 export const Colors = () => (
   <ColorBlocks colors={colors} />
-);
-
-export const Palettes = () => (
-  <PaletteBlocks palettes={palettes} />
 );
 
 export const Typography = () => (
