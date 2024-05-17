@@ -2,9 +2,9 @@ import {
   BorderBlocks,
   ColorBlocks,
   ComponentBlocks,
+  ThemeProvider,
   ShadowBlocks,
   SpacingBlocks,
-  ThemeProvider,
   TypographyBlocks,
   extractTheme,
   useTheme
@@ -33,10 +33,10 @@ const {
   fontWeight
 } = extractTheme(TWConfig);
 
+
 export const Colors = () => (
   <ColorBlocks colors={colors} />
 );
-
 
 export const Typography = () => (
   <TypographyBlocks
