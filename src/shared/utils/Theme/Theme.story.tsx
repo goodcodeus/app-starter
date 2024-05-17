@@ -3,7 +3,6 @@ import {
   ColorBlocks,
   ComponentBlocks,
   ThemeProvider,
-  PaletteBlocks,
   ShadowBlocks,
   SpacingBlocks,
   TypographyBlocks,
