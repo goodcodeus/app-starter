@@ -53,8 +53,16 @@ export default {
           level3: colorPalette.gray[900],
           level4: colorPalette.gray[800],
         },
-        panel: colorPalette['black-pearl'],
-        surface: colorPalette['charade'],
+        panel: {
+          // Panel backgrounds, such as cards, tables, popovers, dialogs, dropdown menus, etc.
+          DEFAULT: colorPalette['black-pearl'],
+          accent: colorPalette['charade']
+        },
+        surface: {
+          // Form component backgrounds, such as text fields, checkboxes, select, etc.
+          DEFAULT: colorPalette['charade'],
+          accent: colorPalette.blue[500]
+        },
         typography: {
           DEFAULT: colorPalette['athens-gray'],
         },
