@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Navigate, Outlet, RouteProps, useLocation } from 'react-router-dom';
+import { Navigate, Outlet, RouteProps, useLocation } from 'react-router';
 import { useAuth } from './AuthContext';
 
 const paths = ['', '/', '/login', '/logout'];

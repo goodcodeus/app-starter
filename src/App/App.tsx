@@ -1,5 +1,5 @@
 import { FC, lazy, Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router';
 import { AuthRoute } from 'core/Auth';
 
 const NotFound = lazy(() => import('./NotFound'));

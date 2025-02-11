@@ -10,7 +10,7 @@ import { errorLink } from './errorLink';
 import { httpLink } from './httpLink';
 import { authLink } from './authLink';
 import { restLink } from './restLink';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 export const ApolloProvider: FC<PropsWithChildren> = ({ children }) => {
   const navigate = useNavigate();
