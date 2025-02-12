@@ -1,0 +1,41 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Free test API",
+    "description": "Free test API",
+    "version": "0.0.1"
+  },
+  "servers": [
+    {
+      "url": "https://jsonplaceholder.typicode.com/",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/posts": {
+      "get": {
+        "tags": [
+          "Post Controller"
+        ],
+        "summary": "Get posts",
+        "operationId": "getPosts",
+        "parameters": [
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}

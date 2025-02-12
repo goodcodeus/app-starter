@@ -16,12 +16,12 @@
     "prettier": "prettier --check 'src/**/*.{js,jsx,ts,tsx,json,md,graphql,gql}'",
     "prettier:fix": "prettier --loglevel warn --write 'src/**/*.{js,jsx,ts,tsx,json,md,graphql,gql}'",
     "format": "npm run prettier:fix && npm run lint:fix",
-    "prepare": "cd .. && husky install ui/.husky"
+    "prepare": "cd .. && husky install ui/.husky",
+    "generate:api": "openapi-rq -i ./src/core/api/fixtures/*.json -o ./src/core/api"
   },
   "dependencies": {
-    "@apollo/client": "^3.12.11",
     "@hookform/resolvers": "^3.3.4",
-    "apollo-link-rest": "^0.9.0",
+    "@tanstack/react-query": "^5.66.0",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "graphql": "^16.8.1",
@@ -39,6 +39,7 @@
     "yup": "^1.6.1"
   },
   "devDependencies": {
+    "@7nohe/openapi-react-query-codegen": "^1.6.2",
     "@chromatic-com/storybook": "^3.2.4",
     "@eslint/js": "^9.20.0",
     "@storybook/addon-actions": "^8.5.4",
@@ -55,6 +56,7 @@
     "@storybook/react": "^8.5.4",
     "@storybook/react-vite": "^8.5.4",
     "@storybook/test": "^8.5.4",
+    "@tanstack/eslint-plugin-query": "^5.66.1",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
