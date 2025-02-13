@@ -1,9 +1,9 @@
+import { useQueryClient } from '@tanstack/react-query';
 import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { AuthProvider } from './AuthContext';
-import { useApolloClient } from '@apollo/client';
 
 export const Auth: FC<{ children: React.ReactNode }> = ({ children }) => {
-  const client = useApolloClient();
+  const client = useQueryClient();
   const [user, setUser] = useState<any>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
@@ -27,7 +27,7 @@ export const Auth: FC<{ children: React.ReactNode }> = ({ children }) => {
 
   const logout = useCallback(async () => {
     // TODO
-    client.clearStore();
+    client.clear();
   }, [client]);
 
 

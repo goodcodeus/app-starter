@@ -1,6 +1,6 @@
 import { Preview } from '@storybook/react';
 import { DocsContainer } from '@storybook/addon-docs';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router';
 import { ThemeProvider } from 'reablocks';
 
 import { storybookTheme } from './theme';

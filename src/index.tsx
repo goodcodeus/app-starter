@@ -1,21 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router';
 import { ThemeProvider } from 'reablocks';
 
 import { theme } from 'shared/utils/Theme';
 import { ErrorBoundary } from 'shared/utils/ErrorBoundary';
 import { Auth } from 'core/Auth';
-import { ApolloProvider } from 'core/Apollo';
 import { App } from './App';
 
 import './index.css';
+import { QueryProvider } from './core/api/QueryProvider';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
-      <ApolloProvider>
+      <QueryProvider>
         <HelmetProvider>
           <Helmet titleTemplate="%s | Starter" defaultTitle="Starter" />
           <ThemeProvider theme={theme}>
@@ -26,7 +26,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
             </ErrorBoundary>
           </ThemeProvider>
         </HelmetProvider>
-      </ApolloProvider>
+      </QueryProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
