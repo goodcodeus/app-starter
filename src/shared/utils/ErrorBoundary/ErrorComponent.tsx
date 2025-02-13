@@ -1,6 +1,6 @@
 import { FC, useEffect, useRef } from 'react';
 import { FallbackProps } from 'react-error-boundary';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 
 export const ErrorComponent: FC<FallbackProps> = ({
   error,
