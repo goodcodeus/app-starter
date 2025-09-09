@@ -1,44 +1,55 @@
+import React from 'react';
 import {
-  BorderBlocks,
   ColorBlocks,
-  ComponentBlocks,
-  ThemeProvider,
-  ShadowBlocks,
-  SpacingBlocks,
   TypographyBlocks,
-  extractTheme,
-  useTheme
+  SpacingBlocks,
+  BorderBlocks,
+  ShadowBlocks,
+  ComponentBlocks,
+  extractTheme, useTheme
 } from 'reablocks';
-import TWConfig from './config';
-
 export default {
-  title: 'General/Theme',
-  component: ThemeProvider,
+  title: 'Components/Theme',
   decorators: [
-    Story => (
-      <div style={{ width: '95vw' }}>
-        <Story />
-      </div>
-    )
+    (Story, context) => {
+      const { tokens } = useTheme();
+
+      const {
+        colors,
+        borderRadius,
+        boxShadow,
+        spacing,
+        fontFamily,
+        fontSize,
+        fontWeight
+      } = extractTheme(tokens);
+
+      return (
+        <div style={{ width: '95vw' }}>
+          <Story
+            colors={colors}
+            borderRadius={borderRadius}
+            boxShadow={boxShadow}
+            spacing={spacing}
+            fontFamily={fontFamily}
+            fontSize={fontSize}
+            fontWeight={fontWeight}
+            theme={context?.globals?.theme}
+          />
+        </div>
+      );
+    }
   ]
 };
 
-const {
-  colors,
-  borderRadius,
-  boxShadow,
-  spacing,
-  fontFamily,
-  fontSize,
-  fontWeight
-} = extractTheme(TWConfig);
+export const Colors = (_, { colors }) => {
+  return <ColorBlocks colors={colors} />;
+};
 
-
-export const Colors = () => (
-  <ColorBlocks colors={colors} />
-);
-
-export const Typography = () => (
+export const Typography = (
+  _,
+  { fontFamily, fontSize, fontWeight }
+) => (
   <TypographyBlocks
     families={fontFamily}
     sizes={fontSize}
@@ -46,15 +57,15 @@ export const Typography = () => (
   />
 );
 
-export const Spacings = () => (
+export const Spacings = (_, { spacing }) => (
   <SpacingBlocks spacings={spacing} />
 );
 
-export const Borders = () => (
+export const Borders = (_, { borderRadius }) => (
   <BorderBlocks borders={borderRadius} />
 );
 
-export const Shadows = () => (
+export const Shadows = (_, { boxShadow }) => (
   <ShadowBlocks shadows={boxShadow} />
 );
 

@@ -1,22 +1,22 @@
-import { ServerError } from '@apollo/client';
-import { onError } from '@apollo/client/link/error';
+import { CombinedGraphQLErrors, ServerError } from '@apollo/client';
+import { ErrorLink } from '@apollo/client/link/error';
 
 export const errorLink = navigate =>
-  onError(({ graphQLErrors, networkError }) => {
-    if (graphQLErrors) {
-      graphQLErrors.forEach(({ message, locations, path }) => {
+  new ErrorLink(({ error, operation, forward }) => {
+    if (CombinedGraphQLErrors.is(error)) {
+      error.errors.forEach(({ message, locations, path }) => {
         console.error(
           `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
         );
       });
-    }
-
-    if (networkError) {
-      console.error(`[Network error]: ${networkError}`);
+    } else {
+      console.error(`[Network error]: ${error.message}`);
 
       // If we get a 401, let's redirect to the login page
-      if ((networkError as ServerError).statusCode === 401) {
+      if ((error as ServerError).statusCode === 401) {
         navigate('/login');
       }
     }
+
+    return forward(operation);
   });
