@@ -1,12 +1,12 @@
 import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { AuthProvider } from './AuthContext';
-import { useApolloClient } from '@apollo/client';
+import { useApolloClient } from '@apollo/client/react';
 
 export const Auth: FC<{ children: React.ReactNode }> = ({ children }) => {
   const client = useApolloClient();
-  const [user, setUser] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+  const [user] = useState<any>(null);
+  const [isLoading] = useState<boolean>(false);
+  const [isAuthenticated] = useState<boolean>(false);
 
   useEffect(() => {
     async function setupUser() {

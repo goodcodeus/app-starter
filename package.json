@@ -19,9 +19,8 @@
     "prepare": "cd .. && husky install ui/.husky"
   },
   "dependencies": {
-    "@apollo/client": "^3.14.0",
+    "@apollo/client": "^4.0.4",
     "@hookform/resolvers": "^4.1.3",
-    "apollo-link-rest": "^0.9.0",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "graphql": "^16.11.0",

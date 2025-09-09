@@ -1,15 +1,14 @@
 import { FC, useMemo, PropsWithChildren } from 'react';
 import {
   ApolloClient,
-  ApolloProvider as ExternalApolloProvider,
   ApolloLink
 } from '@apollo/client';
+import { ApolloProvider as ExternalApolloProvider } from '@apollo/client/react';
 
 import { cache } from './cache';
 import { errorLink } from './errorLink';
 import { httpLink } from './httpLink';
 import { authLink } from './authLink';
-import { restLink } from './restLink';
 import { useNavigate } from 'react-router';
 
 export const ApolloProvider: FC<PropsWithChildren> = ({ children }) => {
@@ -19,14 +18,12 @@ export const ApolloProvider: FC<PropsWithChildren> = ({ children }) => {
     const link = ApolloLink.from([
       errorLink(navigate),
       authLink(),
-      restLink,
       httpLink
     ]);
 
     return new ApolloClient({
       link,
       cache,
-      connectToDevTools: true,
       defaultOptions: {
         watchQuery: {
           errorPolicy: 'ignore',
@@ -34,7 +31,6 @@ export const ApolloProvider: FC<PropsWithChildren> = ({ children }) => {
         },
         query: {
           errorPolicy: 'all',
-          notifyOnNetworkStatusChange: true
         },
         mutate: {
           errorPolicy: 'all'
