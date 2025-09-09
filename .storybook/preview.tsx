@@ -1,5 +1,5 @@
 import { Preview } from '@storybook/react';
-import { DocsContainer } from '@storybook/addon-docs';
+import { DocsContainer } from '@storybook/blocks';
 import { BrowserRouter } from 'react-router';
 import { ThemeProvider } from 'reablocks';
 
