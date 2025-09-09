@@ -10,13 +10,14 @@ const config: StorybookConfig = {
     '@storybook/addon-storysource',
     '@storybook/addon-essentials',
     '@storybook/addon-themes',
-    '@storybook/addon-interactions'
+    '@storybook/addon-interactions',
+    '@storybook/addon-docs',
   ],
   framework: {
     name: '@storybook/react-vite',
     options: {}
   },
-  async viteFinal(config, options) {
+  async viteFinal(config) {
     return mergeConfig(config, {
       server: {
         watch: {
