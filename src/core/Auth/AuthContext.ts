@@ -11,7 +11,7 @@ export interface AuthContextProps {
 export const AuthContext = createContext<AuthContextProps>({
   user: null,
   login: () => undefined,
-  logout: async () => undefined,
+  logout: async () => undefined
 });
 
 export const { Provider: AuthProvider, Consumer: AuthConsumer } = AuthContext;

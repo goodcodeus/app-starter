@@ -2,7 +2,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { FC, PropsWithChildren, useMemo } from 'react';
 
 export const QueryProvider: FC<PropsWithChildren> = ({ children }) => {
-
   const client = useMemo(() => {
     const queryClient = new QueryClient({
       defaultOptions: {
@@ -22,9 +21,5 @@ export const QueryProvider: FC<PropsWithChildren> = ({ children }) => {
     return queryClient;
   }, []);
 
-  return (
-    <QueryClientProvider client={client}>
-      {children}
-    </QueryClientProvider>
-  );
+  return <QueryClientProvider client={client}>{children}</QueryClientProvider>;
 };

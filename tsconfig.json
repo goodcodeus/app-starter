@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES2022",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "types": [
       "vite/client",
       "vitest/globals"
@@ -16,7 +16,7 @@
     "strictNullChecks": false,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "Bundler",
     "noImplicitAny": false,
     "noFallthroughCasesInSwitch": false,
     "resolveJsonModule": true,

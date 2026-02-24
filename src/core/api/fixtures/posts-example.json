@@ -14,13 +14,10 @@
   "paths": {
     "/posts": {
       "get": {
-        "tags": [
-          "Post Controller"
-        ],
+        "tags": ["Post Controller"],
         "summary": "Get posts",
         "operationId": "getPosts",
-        "parameters": [
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "OK",

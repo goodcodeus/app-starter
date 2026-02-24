@@ -1,5 +1,5 @@
-import { Preview } from '@storybook/react';
-import { DocsContainer } from '@storybook/blocks';
+import { Preview } from '@storybook/react-vite';
+import { DocsContainer } from '@storybook/addon-docs/blocks';
 import { BrowserRouter } from 'react-router';
 import { ThemeProvider } from 'reablocks';
 
@@ -21,7 +21,6 @@ const preview: Preview = {
   parameters: {
     layout: 'centered',
     controls: { hideNoControlsWarning: true },
-    actions: { argTypesRegex: '^on.*' },
     docs: {
       theme: storybookTheme,
       container: ({ context, children }) => (

@@ -6,7 +6,7 @@ import { ErrorBoundary as ReactErrorBoundary } from 'react-error-boundary';
 export const ErrorBoundary: FC<{ children: React.ReactNode }> = ({
   children
 }) => {
-  const onError = useCallback((error: Error) => {
+  const onError = useCallback((error: unknown) => {
     if (import.meta.env.PROD) {
       // Lets add some additional context for the error
       /*

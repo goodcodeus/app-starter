@@ -6,7 +6,8 @@ import {
   BorderBlocks,
   ShadowBlocks,
   ComponentBlocks,
-  extractTheme, useTheme
+  extractTheme,
+  useTheme
 } from 'reablocks';
 export default {
   title: 'Components/Theme',
@@ -46,10 +47,7 @@ export const Colors = (_, { colors }) => {
   return <ColorBlocks colors={colors} />;
 };
 
-export const Typography = (
-  _,
-  { fontFamily, fontSize, fontWeight }
-) => (
+export const Typography = (_, { fontFamily, fontSize, fontWeight }) => (
   <TypographyBlocks
     families={fontFamily}
     sizes={fontSize}

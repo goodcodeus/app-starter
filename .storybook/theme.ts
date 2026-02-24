@@ -1,4 +1,4 @@
-import { create } from '@storybook/theming';
+import { create } from 'storybook/theming';
 import Logo from '../src/assets/brand/logo.svg';
 
 export const storybookTheme = create({

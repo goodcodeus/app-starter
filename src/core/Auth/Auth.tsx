@@ -30,7 +30,6 @@ export const Auth: FC<{ children: React.ReactNode }> = ({ children }) => {
     client.clear();
   }, [client]);
 
-
   const values = useMemo(
     () => ({
       user,

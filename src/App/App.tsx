@@ -10,9 +10,7 @@ export const App: FC = () => (
       <Route path="/" element={<AuthRoute />}>
         <Route path="/404" element={<NotFound />} />
       </Route>
-      <Route>
-        {/* <Route path="/login/*" element={<Login />} /> */}
-      </Route>
+      <Route>{/* <Route path="/login/*" element={<Login />} /> */}</Route>
     </Routes>
   </Suspense>
 );
