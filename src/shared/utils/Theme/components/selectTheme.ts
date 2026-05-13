@@ -10,7 +10,8 @@ export const selectTheme: SelectTheme = {
       'p-0 bg-transparent text-ellipsis align-middle max-w-full read-only:cursor-not-allowed focus:outline-hidden disabled:text-content-text-neutral-5 text-inputs-colors-normal-text-input-text-resting',
     placeholder:
       'placeholder:text-inputs-colors-normal-text-input-text-resting focus:placeholder:text-inputs-colors-normal-text-input-text-selected',
-    selectedValue: 'overflow-hidden whitespace-nowrap text-ellipsis flex flex-wrap',
+    selectedValue:
+      'overflow-hidden whitespace-nowrap text-ellipsis flex flex-wrap',
     adornment: {
       start:
         'flex items-center mr-(--inputs-details-space-between-horizontal-md)',
@@ -38,7 +39,8 @@ export const selectTheme: SelectTheme = {
     `,
     open: 'rounded-sm',
     single: {
-      selectedValue: 'overflow-hidden whitespace-nowrap text-ellipsis max-w-full',
+      selectedValue:
+        'overflow-hidden whitespace-nowrap text-ellipsis max-w-full',
       inputContainer: 'flex-nowrap',
       input: 'max-w-full'
     },
@@ -92,5 +94,5 @@ export const selectTheme: SelectTheme = {
       large:
         'text-sm px-(--select-menu-items-details-horizontal-padding-row) py-(--select-menu-items-details-vertical-padding-base)'
     }
-  },
+  }
 };

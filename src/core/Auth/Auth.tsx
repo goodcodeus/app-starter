@@ -10,6 +10,7 @@ interface FakeUser {
 
 const STORAGE_KEY = 'fake-auth-user';
 
+// NOTE: Demo sample using localStorage — replace with a real auth provider (e.g. Auth0, Clerk, Cognito).
 const readUser = (): FakeUser | null => {
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY);

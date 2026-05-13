@@ -1,6 +1,6 @@
 import type { CalendarTheme } from 'reablocks';
 
-import { calendarTheme } from './CalendarTheme';
+import { calendarTheme } from './calendarTheme';
 
 export type CalendarRangeTheme = Omit<CalendarTheme, 'months' | 'years'>;
 
@@ -25,6 +25,6 @@ export const calendarRangeTheme: CalendarRangeTheme = {
   time: calendarTheme.time,
   presets: {
     ...calendarTheme.presets,
-    divider: 'mx-1 h-[calc(100%-30px)] self-end',
-  },
+    divider: 'mx-1 h-[calc(100%-30px)] self-end'
+  }
 };

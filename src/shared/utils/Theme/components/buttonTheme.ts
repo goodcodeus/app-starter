@@ -10,8 +10,10 @@ export const buttonTheme: ButtonTheme = {
     disabled:opacity-40 disabled:cursor-not-allowed
   `,
   fullWidth: 'flex w-full',
-  group: 'rounded-none first:rounded-s last:rounded-e border-s-0 first:border-s',
-  groupText: 'border border-y-transparent border-l-transparent last:border-r-transparent hover:bg-initial',
+  group:
+    'rounded-none first:rounded-s last:rounded-e border-s-0 first:border-s',
+  groupText:
+    'border border-y-transparent border-l-transparent last:border-r-transparent hover:bg-initial',
   adornment: {
     base: 'flex',
     start:
@@ -20,19 +22,26 @@ export const buttonTheme: ButtonTheme = {
     sizes: {
       small: '[&>svg]:size-(--buttons-details-asset-size-sm) small',
       medium: '[&>svg]:size-(--buttons-details-asset-size-md) medium',
-      large: '[&>svg]:size-(--buttons-details-asset-size-lg) large',
-    },
+      large: '[&>svg]:size-(--buttons-details-asset-size-lg) large'
+    }
   },
   sizes: {
-    small: 'h-(--buttons-details-height-core-icon-sm) text-xs px-(--buttons-details-horizontal-padding-sm)',
-    medium: 'h-(--buttons-details-height-core-icon-md) text-sm px-(--buttons-details-horizontal-padding-md)',
-    large: 'h-(--buttons-details-height-core-icon-lg) text-base px-(--buttons-details-horizontal-padding-lg)',
+    small:
+      'h-(--buttons-details-height-core-icon-sm) text-xs px-(--buttons-details-horizontal-padding-sm)',
+    medium:
+      'h-(--buttons-details-height-core-icon-md) text-sm px-(--buttons-details-horizontal-padding-md)',
+    large:
+      'h-(--buttons-details-height-core-icon-lg) text-base px-(--buttons-details-horizontal-padding-lg)'
   },
   iconSizes: {
-    xsmall: 'size-(--buttons-details-height-core-icon-xs) [&>svg]:size-(--buttons-details-asset-size-xs) px-0 py-0',
-    small: 'size-(--buttons-details-height-core-icon-sm) [&>svg]:size-(--buttons-details-asset-size-sm) px-0 py-0',
-    medium: 'size-(--buttons-details-height-core-icon-md) [&>svg]:size-(--buttons-details-asset-size-md) px-0 py-0',
-    large: 'size-(--buttons-details-height-core-icon-lg) [&>svg]:size-(--buttons-details-asset-size-lg) px-0 py-0',
+    xsmall:
+      'size-(--buttons-details-height-core-icon-xs) [&>svg]:size-(--buttons-details-asset-size-xs) px-0 py-0',
+    small:
+      'size-(--buttons-details-height-core-icon-sm) [&>svg]:size-(--buttons-details-asset-size-sm) px-0 py-0',
+    medium:
+      'size-(--buttons-details-height-core-icon-md) [&>svg]:size-(--buttons-details-asset-size-md) px-0 py-0',
+    large:
+      'size-(--buttons-details-height-core-icon-lg) [&>svg]:size-(--buttons-details-asset-size-lg) px-0 py-0'
   },
   variants: {
     filled:
@@ -40,7 +49,7 @@ export const buttonTheme: ButtonTheme = {
     outline: 'border',
     text: 'border-0',
     ghost: '',
-    link: 'border-0 border-b rounded-none border-transparent hover:border-b-buttons-colors-link-secondary-underline-detail-hover',
+    link: 'border-0 border-b rounded-none border-transparent hover:border-b-buttons-colors-link-secondary-underline-detail-hover'
   },
   colors: {
     primary: {
@@ -72,7 +81,7 @@ export const buttonTheme: ButtonTheme = {
         hover:[&_svg]:fill-buttons-colors-link-primary-assets-hover focus-visible:[&_svg]:fill-buttons-colors-link-primary-assets-selected
         disabled:text-buttons-colors-link-primary-text-resting disabled:[&_svg]:fill-buttons-colors-link-primary-assets-resting
         focus-visible:[&_svg]:fill-buttons-colors-link-primary-assets-selected
-      `,
+      `
     },
     secondary: {
       filled: `
@@ -104,7 +113,7 @@ export const buttonTheme: ButtonTheme = {
         [&_svg]:fill-buttons-colors-link-secondary-assets-resting hover:[&_svg]:fill-buttons-colors-link-secondary-assets-hover focus-visible:[&_svg]:fill-buttons-colors-link-secondary-assets-selected
         disabled:text-buttons-colors-link-secondary-text-resting disabled:[&_svg]:fill-buttons-colors-link-secondary-assets-resting
         hover:border-b-buttons-colors-core-icon-secondary-background-hover focus-visible:text-buttons-colors-core-icon-ghost-text-selected
-      `,
+      `
     },
     default: {
       filled: `
@@ -135,17 +144,21 @@ export const buttonTheme: ButtonTheme = {
         [&_svg]:fill-buttons-colors-link-primary-assets-resting hover:[&_svg]:fill-buttons-colors-link-primary-assets-hover focus-visible:[&_svg]:fill-buttons-colors-link-primary-assets-selected
         disabled:text-buttons-colors-link-primary-text-resting disabled:[&_svg]:fill-buttons-colors-link-primary-assets-resting
         focus-visible:[&_svg]:fill-buttons-colors-link-primary-assets-selected
-      `,
+      `
     },
     success: {
-      filled: 'bg-background-semantic-success-5 border-background-semantic-success-4 hover:bg-background-semantic-success-4 hover:border-background-semantic-success-3',
-      outline: 'border-background-semantic-success-4 hover:border-background-semantic-success-3',
-      text: 'text-content-text-semantic-success-base hover:text-content-text-semantic-success-1',
+      filled:
+        'bg-background-semantic-success-5 border-background-semantic-success-4 hover:bg-background-semantic-success-4 hover:border-background-semantic-success-3',
+      outline:
+        'border-background-semantic-success-4 hover:border-background-semantic-success-3',
+      text: 'text-content-text-semantic-success-base hover:text-content-text-semantic-success-1'
     },
     warning: {
-      filled: 'bg-background-semantic-warning-5 border-background-semantic-warning-4 hover:bg-background-semantic-warning-4 hover:border-background-semantic-warning-3',
-      outline: 'border-background-semantic-warning-4 hover:border-background-semantic-warning-3',
-      text: 'text-content-text-semantic-warning-base hover:text-content-text-semantic-warning-1',
+      filled:
+        'bg-background-semantic-warning-5 border-background-semantic-warning-4 hover:bg-background-semantic-warning-4 hover:border-background-semantic-warning-3',
+      outline:
+        'border-background-semantic-warning-4 hover:border-background-semantic-warning-3',
+      text: 'text-content-text-semantic-warning-base hover:text-content-text-semantic-warning-1'
     },
     destructive: {
       filled: `
@@ -176,7 +189,7 @@ export const buttonTheme: ButtonTheme = {
         [&_svg]:fill-buttons-colors-link-destructive-assets-resting hover:[&_svg]:fill-buttons-colors-link-destructive-assets-hover focus-visible:[&_svg]:fill-buttons-colors-link-destructive-assets-selected
         disabled:text-buttons-colors-link-destructive-text-resting disabled:[&_svg]:fill-buttons-colors-link-destructive-assets-resting
         hover:border-b-buttons-colors-core-icon-destructive-stroke-hover
-      `,
+      `
     },
     error: {
       filled: `
@@ -201,7 +214,7 @@ export const buttonTheme: ButtonTheme = {
         hover:bg-buttons-colors-core-icon-destructive-background-hover hover:border-buttons-colors-core-icon-ghost-stroke-hover hover:text-buttons-colors-core-icon-ghost-text-hover hover:[&_svg]:fill-buttons-colors-core-icon-ghost-assets-hover
         focus-visible:bg-buttons-colors-core-icon-destructive-background-selected focus-visible:border-buttons-colors-core-icon-destructive-stroke-selected focus-visible:text-buttons-colors-core-icon-ghost-text-selected focus-visible:[&_svg]:fill-buttons-colors-core-icon-ghost-assets-selected
         disabled:bg-buttons-colors-core-icon-ghost-background-resting disabled:border-buttons-colors-core-icon-ghost-stroke-resting disabled:text-buttons-colors-core-icon-ghost-text-resting disabled:[&_svg]:fill-buttons-colors-core-icon-ghost-assets-resting
-      `,
-    },
-  },
+      `
+    }
+  }
 };

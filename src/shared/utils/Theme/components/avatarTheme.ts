@@ -7,5 +7,5 @@ export const avatarTheme: AvatarTheme = {
     bg-avatar-colors-background-container-resting 
     after:border-avatar-colors-stroke-container-resting
   `,
-  rounded: 'rounded-full after:rounded-full',
+  rounded: 'rounded-full after:rounded-full'
 };

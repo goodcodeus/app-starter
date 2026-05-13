@@ -11,12 +11,12 @@
     "build-storybook": "storybook build",
     "test": "vitest --passWithNoTests",
     "test:coverage": "vitest run --coverage --passWithNoTests",
-    "lint": "npx eslint --ext js,ts,tsx",
-    "lint:fix": "npx eslint --ext js,ts,tsx --fix",
+    "lint": "npx eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "npx eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
     "prettier": "prettier --check 'src/**/*.{js,jsx,ts,tsx,json,md,graphql,gql}'",
     "prettier:fix": "prettier --loglevel warn --write 'src/**/*.{js,jsx,ts,tsx,json,md,graphql,gql}'",
     "format": "npm run prettier:fix && npm run lint:fix",
-    "prepare": "npx skills experimental_install && pnpm sync:stories && cd .. && husky install ui/.husky",
+    "prepare": "npx skills experimental_install && npm run sync:stories && husky",
     "sync:stories": "cpx \"node_modules/reablocks/dist/stories/*.story.tsx\" \"src/stories/components\" -C",
     "generate:api": "orval --config orval.config.ts"
   },
@@ -28,7 +28,7 @@
     "motion": "^12.38.0",
     "nanoid": "^5.1.11",
     "orval": "^8.10.0",
-    "reablocks": "10.0.0",
+    "reablocks": "10.0.1",
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "react-error-boundary": "^6.1.1",
@@ -79,10 +79,10 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint --ext js,ts,tsx --fix"
+      "eslint --fix"
     ],
     "src/**/*.{js,jsx,ts,tsx,json,md,graphql,gql}": [
-      "prettier --write "
+      "prettier --write"
     ]
   }
 }

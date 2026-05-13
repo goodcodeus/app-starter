@@ -11,10 +11,10 @@ export const stepperTheme: StepperTheme = {
       active: 'border border-stroke-brand-1 bg-background-brand-base',
       label: {
         base: 'flex flex-row items-center gap-1 border border-content-assets-neutral-3 px-3 py-1 rounded-[20px]',
-        active: 'border-stroke-brand-1 bg-background-brand-5',
-      },
+        active: 'border-stroke-brand-1 bg-background-brand-5'
+      }
     },
     active: 'border-stroke-brand-1',
-    content: 'pb-6',
-  },
+    content: 'pb-6'
+  }
 };

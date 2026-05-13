@@ -1,7 +1,7 @@
 import type { DateInputTheme } from 'reablocks';
 
-import { calendarTheme } from './CalendarTheme';
-import { inputTheme } from './InputTheme';
+import { calendarTheme } from './calendarTheme';
+import { inputTheme } from './inputTheme';
 
 export const dateInputTheme: DateInputTheme = {
   input: inputTheme,
@@ -10,7 +10,7 @@ export const dateInputTheme: DateInputTheme = {
     list: 'w-full',
     option: {
       base: '',
-      active: '',
-    },
-  },
+      active: ''
+    }
+  }
 };

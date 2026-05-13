@@ -4,10 +4,7 @@ import { AuthRoute } from 'core/Auth';
 import { PageLoader } from 'shared/components/PageLoader/PageLoader';
 
 const Login = lazy(() => import('./Login'));
-// const Dashboard = lazy(() => import('./Dashboard'));
-const Dashboard = lazy(() =>
-  new Promise((r) => setTimeout(r, 5000)).then(() => import('./Dashboard'))
-);
+const Dashboard = lazy(() => import('./Dashboard'));
 const NotFound = lazy(() => import('./NotFound'));
 
 export const App: FC = () => (

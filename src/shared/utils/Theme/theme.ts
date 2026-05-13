@@ -1,51 +1,51 @@
 import { type ReablocksTheme } from 'reablocks';
 
-import { arrowTheme } from './components/ArrowTheme';
-import { avatarGroupTheme } from './components/AvatarGroupTheme';
-import { avatarTheme } from './components/AvatarTheme';
-import { backdropTheme } from './components/BackdropTheme';
-import { badgeTheme } from './components/BadgeTheme';
-import { breadcrumbsTheme } from './components/BreadcrumbsTheme';
-import { buttonTheme } from './components/ButtonTheme';
-import { calendarRangeTheme } from './components/CalendarRangeTheme';
-import { calendarTheme } from './components/CalendarTheme';
-import { calloutTheme } from './components/CalloutTheme';
-import { cardTheme } from './components/CardTheme';
-import { checkboxTheme } from './components/CheckboxTheme';
-import { chipTheme } from './components/ChipTheme';
-import { collapseTheme } from './components/CollapseTheme';
-import { commandPaletteTheme } from './components/CommandPaletteTheme';
-import { contextMenuTheme } from './components/ContextMenuTheme';
-import { dateFormatTheme } from './components/DateFormatTheme';
-import { dateInputTheme } from './components/DateinputTheme';
-import { dialogTheme } from './components/DialogTheme';
-import { dividerTheme } from './components/DividerTheme';
-import { dotsLoaderTheme } from './components/DotsLoaderTheme';
-import { drawerTheme } from './components/DrawerTheme';
-import { ellipsisTheme } from './components/EllipsisTheme';
-import { fieldTheme } from './components/FieldTheme';
-import { inputTheme } from './components/InputTheme';
-import { jsonTreeTheme } from './components/JsonTreeTheme';
-import { kbdTheme } from './components/KbdTheme';
-import { listTheme } from './components/ListTheme';
-import { menuTheme } from './components/MenuTheme';
-import { navigationTheme } from './components/NavigationTheme';
-import { notificationTheme } from './components/NotificationTheme';
-import { pagerTheme } from './components/PagerTheme';
-import { popoverTheme } from './components/PopoverTheme';
-import { radioTheme } from './components/RadioTheme';
-import { rangeTheme } from './components/RangeTheme';
-import { redactTheme } from './components/RedactTheme';
-import { selectTheme } from './components/SelectTheme';
-import { skeletonTheme } from './components/SkeletonTheme';
-import { sortTheme } from './components/SortTheme';
-import { stepperTheme } from './components/StepperTheme';
-import { tabsTheme } from './components/TabsTheme';
-import { textareaTheme } from './components/TextAreaTheme';
-import { toggleTheme } from './components/ToogleTheme';
-import { tooltipTheme } from './components/TooltipTheme';
-import { treeTheme } from './components/TreeTheme';
-import { typographyTheme } from './components/TypographyTheme';
+import { arrowTheme } from './components/arrowTheme';
+import { avatarGroupTheme } from './components/avatarGroupTheme';
+import { avatarTheme } from './components/avatarTheme';
+import { backdropTheme } from './components/backdropTheme';
+import { badgeTheme } from './components/badgeTheme';
+import { breadcrumbsTheme } from './components/breadcrumbsTheme';
+import { buttonTheme } from './components/buttonTheme';
+import { calendarRangeTheme } from './components/calendarRangeTheme';
+import { calendarTheme } from './components/calendarTheme';
+import { calloutTheme } from './components/calloutTheme';
+import { cardTheme } from './components/cardTheme';
+import { checkboxTheme } from './components/checkboxTheme';
+import { chipTheme } from './components/chipTheme';
+import { collapseTheme } from './components/collapseTheme';
+import { commandPaletteTheme } from './components/commandPaletteTheme';
+import { contextMenuTheme } from './components/contextMenuTheme';
+import { dateFormatTheme } from './components/dateFormatTheme';
+import { dateInputTheme } from './components/dateinputTheme';
+import { dialogTheme } from './components/dialogTheme';
+import { dividerTheme } from './components/dividerTheme';
+import { dotsLoaderTheme } from './components/dotsLoaderTheme';
+import { drawerTheme } from './components/drawerTheme';
+import { ellipsisTheme } from './components/ellipsisTheme';
+import { fieldTheme } from './components/fieldTheme';
+import { inputTheme } from './components/inputTheme';
+import { jsonTreeTheme } from './components/jsonTreeTheme';
+import { kbdTheme } from './components/kbdTheme';
+import { listTheme } from './components/listTheme';
+import { menuTheme } from './components/menuTheme';
+import { navigationTheme } from './components/navigationTheme';
+import { notificationTheme } from './components/notificationTheme';
+import { pagerTheme } from './components/pagerTheme';
+import { popoverTheme } from './components/popoverTheme';
+import { radioTheme } from './components/radioTheme';
+import { rangeTheme } from './components/rangeTheme';
+import { redactTheme } from './components/redactTheme';
+import { selectTheme } from './components/selectTheme';
+import { skeletonTheme } from './components/skeletonTheme';
+import { sortTheme } from './components/sortTheme';
+import { stepperTheme } from './components/stepperTheme';
+import { tabsTheme } from './components/tabsTheme';
+import { textareaTheme } from './components/textAreaTheme';
+import { toggleTheme } from './components/toogleTheme';
+import { tooltipTheme } from './components/tooltipTheme';
+import { treeTheme } from './components/treeTheme';
+import { typographyTheme } from './components/typographyTheme';
 
 export const theme: ReablocksTheme = {
   components: {
@@ -94,6 +94,6 @@ export const theme: ReablocksTheme = {
     stepper: stepperTheme,
     callout: calloutTheme,
     field: fieldTheme,
-    typography: typographyTheme,
-  },
+    typography: typographyTheme
+  }
 };

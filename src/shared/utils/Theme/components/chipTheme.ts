@@ -3,13 +3,15 @@ import type { ChipTheme } from 'reablocks';
 export const chipTheme: ChipTheme = {
   base: 'inline-flex whitespace-nowrap border font-medium select-none items-center justify-center rounded-(--badges-details-corner-radius-corner-radius) transition-colors outline-none',
   label: 'flex items-center gap-1',
-  focus: 'focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-offset-2',
+  focus:
+    'focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-offset-2',
   variants: {
     filled: '',
     outline: '',
     subtle: '',
     'tag-filled': 'rounded-none cursor-pointer tag font-semibold',
-    'tag-outline': 'bg-transparent rounded-none cursor-pointer tag font-semibold',
+    'tag-outline':
+      'bg-transparent rounded-none cursor-pointer tag font-semibold'
   },
   colors: {
     default: {
@@ -46,7 +48,7 @@ export const chipTheme: ChipTheme = {
           text-tags-colors-neutral-text-label-base
           [&>svg]:text-tags-colors-neutral-assets-lead-icon-base
           hover:border-tags-colors-neutral-stroke-hover
-        `,
+        `
       },
       selectable: {
         base: 'hover:cursor-pointer',
@@ -61,10 +63,10 @@ export const chipTheme: ChipTheme = {
             selected: `
               border-tags-colors-neutral-stroke-selected bg-tags-colors-neutral-background-selected
               hover:border-tags-colors-neutral-stroke-selected hover:bg-tags-colors-neutral-background-selected
-            `,
-          },
-        },
-      },
+            `
+          }
+        }
+      }
     },
     primary: {
       variants: {
@@ -100,7 +102,7 @@ export const chipTheme: ChipTheme = {
           text-tags-colors-brand-text-label-base
           [&>svg]:text-tags-colors-brand-assets-lead-icon-base
           hover:border-tags-colors-brand-stroke-hover
-        `,
+        `
       },
       selectable: {
         base: 'hover:cursor-pointer',
@@ -114,14 +116,14 @@ export const chipTheme: ChipTheme = {
             selected: `
               border-tags-colors-brand-stroke-selected bg-tags-colors-brand-background-selected
               hover:border-tags-colors-brand-stroke-selected hover:bg-tags-colors-brand-background-selected
-            `,
+            `
           },
           'tag-filled': {
             base: '',
-            selected: 'bg-tags-colors-brand-background-selected',
-          },
-        },
-      },
+            selected: 'bg-tags-colors-brand-background-selected'
+          }
+        }
+      }
     },
     secondary: {
       variants: {
@@ -157,7 +159,7 @@ export const chipTheme: ChipTheme = {
           text-tags-colors-neutral-text-label-base
           [&>svg]:text-tags-colors-neutral-assets-lead-icon-base
           hover:border-tags-colors-neutral-stroke-hover
-        `,
+        `
       },
       selectable: {
         base: 'hover:cursor-pointer',
@@ -173,14 +175,14 @@ export const chipTheme: ChipTheme = {
             selected: `
               border-tags-colors-accent-stroke-selected bg-tags-colors-accent-background-selected
               hover:border-tags-colors-accent-stroke-selected hover:bg-tags-colors-accent-background-selected
-            `,
+            `
           },
           'tag-filled': {
             base: '',
-            selected: 'bg-tags-colors-neutral-background-selected',
-          },
-        },
-      },
+            selected: 'bg-tags-colors-neutral-background-selected'
+          }
+        }
+      }
     },
     success: {
       variants: {
@@ -216,7 +218,7 @@ export const chipTheme: ChipTheme = {
           text-tags-colors-success-text-label-base
           [&>svg]:text-tags-colors-success-assets-lead-icon-base
           hover:border-tags-colors-success-stroke-hover
-        `,
+        `
       },
       selectable: {
         base: 'hover:cursor-pointer',
@@ -230,14 +232,15 @@ export const chipTheme: ChipTheme = {
             selected: `
               border-tags-colors-success-stroke-selected bg-tags-colors-success-background-selected
               hover:border-tags-colors-success-stroke-selected hover:bg-tags-colors-success-background-selected
-            `,
+            `
           },
           'tag-filled': {
             base: '',
-            selected: 'bg-tags-colors-success-background-selected border-tags-colors-success-stroke-selected',
-          },
-        },
-      },
+            selected:
+              'bg-tags-colors-success-background-selected border-tags-colors-success-stroke-selected'
+          }
+        }
+      }
     },
     warning: {
       variants: {
@@ -273,7 +276,7 @@ export const chipTheme: ChipTheme = {
           text-tags-colors-warning-text-label-base
           [&>svg]:text-tags-colors-warning-assets-lead-icon-base
           hover:border-tags-colors-warning-stroke-hover
-        `,
+        `
       },
       selectable: {
         base: 'hover:cursor-pointer',
@@ -287,14 +290,15 @@ export const chipTheme: ChipTheme = {
             selected: `
               border-tags-colors-warning-stroke-selected bg-tags-colors-warning-background-selected
               hover:border-tags-colors-warning-stroke-selected hover:bg-tags-colors-warning-background-selected
-            `,
+            `
           },
           'tag-filled': {
             base: '',
-            selected: 'bg-tags-colors-warning-background-selected border-tags-colors-warning-stroke-selected',
-          },
-        },
-      },
+            selected:
+              'bg-tags-colors-warning-background-selected border-tags-colors-warning-stroke-selected'
+          }
+        }
+      }
     },
     error: {
       variants: {
@@ -330,7 +334,7 @@ export const chipTheme: ChipTheme = {
           text-tags-colors-error-text-label-base
           [&>svg]:text-tags-colors-error-assets-lead-icon-base
           hover:border-tags-colors-error-stroke-hover
-        `,
+        `
       },
       selectable: {
         base: 'hover:cursor-pointer',
@@ -344,14 +348,15 @@ export const chipTheme: ChipTheme = {
             selected: `
               border-tags-colors-error-stroke-selected bg-tags-colors-error-background-selected
               hover:border-tags-colors-error-stroke-selected hover:bg-tags-colors-error-background-selected
-            `,
+            `
           },
           'tag-filled': {
             base: '',
-            selected: 'bg-tags-colors-error-background-selected border-tags-colors-error-stroke-selected',
-          },
-        },
-      },
+            selected:
+              'bg-tags-colors-error-background-selected border-tags-colors-error-stroke-selected'
+          }
+        }
+      }
     },
     info: {
       variants: {
@@ -387,7 +392,7 @@ export const chipTheme: ChipTheme = {
           text-tags-colors-info-text-label-base
           [&>svg]:text-tags-colors-info-assets-lead-icon-base
           hover:border-tags-colors-info-stroke-hover
-        `,
+        `
       },
       selectable: {
         base: 'hover:cursor-pointer',
@@ -401,14 +406,15 @@ export const chipTheme: ChipTheme = {
             selected: `
               border-tags-colors-info-stroke-selected bg-tags-colors-info-background-selected
               hover:border-tags-colors-info-stroke-selected hover:bg-tags-colors-info-background-selected
-            `,
+            `
           },
           'tag-filled': {
             base: '',
-            selected: 'bg-tags-colors-info-background-selected border-tags-colors-info-stroke-selected',
-          },
-        },
-      },
+            selected:
+              'bg-tags-colors-info-background-selected border-tags-colors-info-stroke-selected'
+          }
+        }
+      }
     },
     accent: {
       variants: {
@@ -440,17 +446,17 @@ export const chipTheme: ChipTheme = {
           text-tags-colors-accent-text-label-base
           [&>svg]:text-tags-colors-accent-assets-lead-icon-base
           hover:border-tags-colors-accent-stroke-hover
-        `,
+        `
       },
       selectable: {
         base: 'hover:cursor-pointer',
         variants: {
           'tag-filled': {
             base: '',
-            selected: 'bg-tags-colors-accent-background-selected',
-          },
-        },
-      },
+            selected: 'bg-tags-colors-accent-background-selected'
+          }
+        }
+      }
     },
     minimal: {
       selectable: {
@@ -458,21 +464,24 @@ export const chipTheme: ChipTheme = {
         variants: {
           'tag-filled': {
             base: '',
-            selected: 'bg-tags-colors-minimal-background-selected',
-          },
-        },
-      },
-    },
+            selected: 'bg-tags-colors-minimal-background-selected'
+          }
+        }
+      }
+    }
   },
   adornment: {
     base: 'flex items-center justify-center',
     start: '',
     end: '',
     sizes: {
-      small: '[&>svg]:size-(--badges-details-asset-size-sm) [.tag>&>svg]:size-(--tags-details-asset-size-icon)',
-      medium: '[&>svg]:size-(--badges-details-asset-size-md) [.tag>&>svg]:size-(--tags-details-asset-size-icon)',
-      large: '[&>svg]:size-(--badges-details-asset-size-lg) [.tag>&>svg]:size-(--tags-details-asset-size-icon)',
-    },
+      small:
+        '[&>svg]:size-(--badges-details-asset-size-sm) [.tag>&>svg]:size-(--tags-details-asset-size-icon)',
+      medium:
+        '[&>svg]:size-(--badges-details-asset-size-md) [.tag>&>svg]:size-(--tags-details-asset-size-icon)',
+      large:
+        '[&>svg]:size-(--badges-details-asset-size-lg) [.tag>&>svg]:size-(--tags-details-asset-size-icon)'
+    }
   },
   sizes: {
     small:
@@ -480,15 +489,15 @@ export const chipTheme: ChipTheme = {
     medium:
       'h-(--badges-details-height-md) text-xs gap-(--badges-details-space-between-md) px-(--badges-details-horizontal-padding-md) [&.tag]:h-7 [&.tag]:px-2! [&.tag]:gap-(--tags-details-space-between-base)',
     large:
-      'h-(--badges-details-height-lg) text-md gap-(--badges-details-space-between-lg) px-(--badges-details-horizontal-padding-lg) text-sm [&.tag]:h-8 [&.tag]:px-2! [&.tag]:gap-(--tags-details-space-between-base)',
+      'h-(--badges-details-height-lg) text-md gap-(--badges-details-space-between-lg) px-(--badges-details-horizontal-padding-lg) text-sm [&.tag]:h-8 [&.tag]:px-2! [&.tag]:gap-(--tags-details-space-between-base)'
   },
   deleteButton: {
     base: 'transition-colors ml-1 outline-none text-inherit hover:text-inherit',
     sizes: {
       small: 'size-2 [*>svg]:size-(--tags-details-asset-size-close)',
       medium: 'size-3 [*>svg]:size-(--tags-details-asset-size-close)',
-      large: 'size-3 [*>svg]:size-(--tags-details-asset-size-close)',
-    },
+      large: 'size-3 [*>svg]:size-(--tags-details-asset-size-close)'
+    }
   },
-  disabled: 'cursor-not-allowed opacity-50',
+  disabled: 'cursor-not-allowed opacity-50'
 };

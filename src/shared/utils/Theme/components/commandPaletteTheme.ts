@@ -2,7 +2,7 @@ import type {
   CommandPaletteInputTheme,
   CommandPaletteItemTheme,
   CommandPaletteSectionTheme,
-  CommandPaletteTheme,
+  CommandPaletteTheme
 } from 'reablocks';
 
 export const commandPaletteInputTheme: CommandPaletteInputTheme = {
@@ -20,7 +20,7 @@ export const commandPaletteItemTheme: CommandPaletteItemTheme = {
 
 export const commandPaletteSectionTheme: CommandPaletteSectionTheme = {
   base: 'bg-background-neutral-inverse-raised-1',
-  first: 'pt-2.5',
+  first: 'pt-2.5'
 };
 
 export const commandPaletteTheme: CommandPaletteTheme = {
@@ -29,5 +29,5 @@ export const commandPaletteTheme: CommandPaletteTheme = {
   emptyContainer: '',
   input: commandPaletteInputTheme,
   item: commandPaletteItemTheme,
-  section: commandPaletteSectionTheme,
+  section: commandPaletteSectionTheme
 };
