@@ -10,7 +10,7 @@ The project is broken into different branches based on your api solution ( rest 
 
 This project ships agent skills (e.g. `reablocks`, `reachat`) pinned in `skills-lock.json` via the [Skills CLI](https://skills.sh). The materialized skill files live in `.agents/skills/` and are gitignored — they are restored from the lock file.
 
-Restoration runs automatically on `pnpm install` via the `prepare` script (`npx skills experimental_install`). To run it manually:
+Restoration runs automatically on `npm install` via the `prepare` script (`npx skills experimental_install`). To run it manually:
 
 ```bash
 npx skills experimental_install
@@ -30,7 +30,29 @@ Commit `skills-lock.json` after any add/update so other contributors restore the
 
 ## Reablocks stories sync
 
-Story files from the installed `reablocks` package are copied into `src/stories/components/` so they render inside the app's `ThemeProvider` in Storybook. The directory is gitignored and re-synced on `pnpm install` (or manually via `pnpm sync:stories`).
+Story files from the installed `reablocks` package are copied into `src/stories/components/` so the upstream component stories run **inside this project's `ThemeProvider`** in Storybook. This gives you a live playground for every reablocks component rendered with the project's design tokens — useful for:
+
+- **Theme testing** — verify how each component looks under the project's `theme.ts` (colors, spacing, radii, typography) and across light/dark variants without touching the app shell.
+- **Theme configuration** — when tweaking a component's theme file in `src/shared/utils/Theme/components/`, open the matching story in Storybook to iterate on the change with all variants/states already exercised.
+- **Component discovery** — browse every reablocks component's props, variants, and states without leaving the project.
+
+### How the sync works
+
+The `sync:stories` script copies `node_modules/reablocks/dist/stories/*.story.tsx` into `src/stories/components/`:
+
+```bash
+npm run sync:stories
+```
+
+It also runs automatically on `npm install` via the `prepare` script. The `src/stories/components/` directory is gitignored — re-run the sync after upgrading reablocks to pick up new or changed stories.
+
+### Running Storybook
+
+```bash
+npm run storybook
+```
+
+The synced stories appear alongside any custom stories you add under `src/stories/`.
 
 ## Tokens configuration
 
