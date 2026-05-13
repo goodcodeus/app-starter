@@ -1,0 +1,5 @@
+import type { EllipsisTheme } from 'reablocks';
+
+export const ellipsisTheme: EllipsisTheme = {
+  dots: 'cursor-pointer opacity-50 text-[unset] p-0 border-[none] outline-hidden',
+};

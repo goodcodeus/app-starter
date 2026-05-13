@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { Navigate, Outlet, RouteProps, useLocation } from 'react-router';
 import { useAuth } from './AuthContext';
+import { SideNav } from 'App/SideNav';
 
 const paths = ['', '/', '/login', '/logout'];
 export const PREV_ROUTE = 'PREV_ROUTE';
@@ -30,5 +31,12 @@ export const AuthRoute: FC<RouteProps> = () => {
     return <div>Loading...</div>;
   }
 
-  return <Outlet />;
+  return (
+    <div className="w-screen h-screen flex flex-row overflow-x-auto">
+      <SideNav />
+      <div className="flex-1 h-full overflow-auto p-6">
+        <Outlet />
+      </div>
+    </div>
+  );
 };

@@ -19,7 +19,7 @@ export const ErrorComponent: FC<FallbackProps> = ({
     <div>
       <h1>Error</h1>
       <h2>Something bad happened</h2>
-      <pre>{error.message}</pre>
+      <pre>{error instanceof Error ? error.message : String(error)}</pre>
     </div>
   );
 };

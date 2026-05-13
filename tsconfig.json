@@ -8,15 +8,16 @@
       "vitest/globals"
     ],
     "allowJs": true,
-    "baseUrl": "./src",
+    "paths": {
+      "*": ["./src/*"]
+    },
     "skipLibCheck": true,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "strict": true,
     "strictNullChecks": false,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "Bundler",
     "noImplicitAny": false,
     "noFallthroughCasesInSwitch": false,
     "resolveJsonModule": true,
@@ -25,5 +26,6 @@
     "jsx": "react-jsx"
   },
   "include": ["src"],
+  "exclude": ["node_modules", "src/stories/**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
