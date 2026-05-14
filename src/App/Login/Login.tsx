@@ -1,17 +1,17 @@
 import { FC } from 'react';
-import { Controller, Resolver, useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
+import { Controller, useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 import { Navigate, useNavigate } from 'react-router';
 import { Button, Field, H2, Input, Muted } from 'reablocks';
-import * as yup from 'yup';
+import * as z from 'zod';
 import { useAuth } from 'core/Auth';
 
-const loginSchema = yup.object({
-  username: yup.string().trim().required('Username is required'),
-  password: yup.string().required('Password is required')
+const loginSchema = z.object({
+  username: z.string().trim().min(1, 'Username is required'),
+  password: z.string().min(1, 'Password is required')
 });
 
-type LoginFormData = yup.InferType<typeof loginSchema>;
+type LoginFormData = z.infer<typeof loginSchema>;
 
 export const Login: FC = () => {
   const { isAuthenticated, login } = useAuth();
@@ -22,7 +22,7 @@ export const Login: FC = () => {
     formState: { errors, isSubmitting }
   } = useForm<LoginFormData>({
     defaultValues: { username: '', password: '' },
-    resolver: yupResolver(loginSchema) as Resolver<LoginFormData>
+    resolver: zodResolver(loginSchema)
   });
 
   if (isAuthenticated) {
