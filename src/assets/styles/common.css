@@ -1,0 +1,47 @@
+body {
+  color-scheme: dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  @apply font-sans text-base;
+  line-height: 1.3;
+}
+
+blockquote,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre {
+  margin: 0;
+}
+
+code {
+  @apply font-mono text-base;
+}
+
+body,
+#root {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+
+  @apply bg-background-neutral-canvas-base text-content-text-on-color-light-dark;
+
+  --tooltip-background: var(--color-tooltip-colors-brand-background-default);
+  --color-on-tooltip: var(--color-white);
+  --tooltip-border-radius: 5px;
+  --tooltip-spacing: 5px;
+}

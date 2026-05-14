@@ -9,6 +9,12 @@ declare module '*.svg' {
   export default src;
 }
 
+declare module '*.svg?react' {
+  import type React from 'react';
+  const Component: React.FC<React.SVGProps<SVGSVGElement>>;
+  export default Component;
+}
+
 interface ImportMetaEnv {
   // readonly VITE_API_URL: string;
 }

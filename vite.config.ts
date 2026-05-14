@@ -1,22 +1,25 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import eslint from 'vite-plugin-eslint';
+import eslint from '@nabla/vite-plugin-eslint';
 import svgrPlugin from 'vite-plugin-svgr';
-import tsconfigPaths from 'vite-tsconfig-paths';
 import checker from 'vite-plugin-checker';
 
 export default defineConfig(({ command }) => {
   const config = {
+    resolve: {
+      tsconfigPaths: true
+    },
     plugins: [
       svgrPlugin(),
-      tsconfigPaths(),
       react(),
       eslint({
-        overrideConfigFile: './.eslintrc.cjs',
-        // eslint-disable-next-line
-        // @ts-ignore
-        exclude: [/virtual:/, /node_modules/, /.storybook/],
-        failOnError: false,
+        eslintOptions: {
+          overrideConfigFile: './eslint.config.js'
+        },
+        shouldLint: path =>
+          !/virtual:/.test(path) &&
+          !/node_modules/.test(path) &&
+          !/\.storybook/.test(path)
       }),
       checker({
         typescript: true

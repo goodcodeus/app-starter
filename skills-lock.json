@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "reablocks": {
+      "source": "reaviz/skills",
+      "sourceType": "github",
+      "skillPath": "reablocks/SKILL.md",
+      "computedHash": "398e49287f9fac896a6aba89969069b8b70b20e35165fe8ec382f827405eb0b0"
+    }
+  }
+}

@@ -8,7 +8,7 @@ import { ErrorBoundary } from 'shared/utils/ErrorBoundary';
 import { Auth } from 'core/Auth';
 import { App } from './App';
 
-import './index.css';
+import './assets/styles/index.css';
 import { QueryProvider } from './core/api/QueryProvider';
 
 createRoot(document.getElementById('root') as HTMLElement).render(

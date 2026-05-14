@@ -4,8 +4,8 @@ export interface AuthContextProps {
   user: any | null;
   isAuthenticated?: boolean;
   isLoading?: boolean;
-  login: () => void;
-  logout: (redirect?: boolean) => void;
+  login: (username?: string) => Promise<void> | void;
+  logout: (redirect?: boolean) => Promise<void> | void;
 }
 
 export const AuthContext = createContext<AuthContextProps>({
